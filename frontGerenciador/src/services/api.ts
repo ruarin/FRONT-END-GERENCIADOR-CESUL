@@ -5,7 +5,6 @@ const api = axios.create({
     baseURL: 'http://192.168.30.105:3333'
 })
 
-
 export const listarTodasIes = async () => {
     return await api.get<Ies[]>('/listarTodasIes');
 }
