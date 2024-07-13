@@ -1,6 +1,6 @@
 export interface Ies{
 
-    codigo?: string;
+    codigo: string;
     nome: string;
     dataCriacao: Date;
     cnpj: string;

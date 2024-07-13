@@ -9,11 +9,11 @@ export const listarTodasIes = async () => {
     return await api.get<Ies[]>('/listarTodasIes');
 }
 
-export const salvarIes = async (data : Ies) => {
+export const salvarIes = async (data : Omit<Ies, 'codigo'>) => {
     return await api.post('/salvarIes', data)
 }
 
-export const alterarIes = async (codigo: string, data: Ies) => {
+export const alterarIes = async (codigo: string, data: Omit<Ies, 'codigo'>) => {
     return await api.put(`/alterarIes/${codigo}`, data)
 }
 

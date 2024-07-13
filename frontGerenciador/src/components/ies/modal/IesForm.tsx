@@ -35,6 +35,8 @@ const IesForm: React.FC<IesFormProps> = ({ies, onClose}) => {
 
 
     const handleSubmit = async (ev: React.FormEvent) => {
+    
+        ev.preventDefault()
 
         try{
 
