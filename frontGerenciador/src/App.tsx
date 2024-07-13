@@ -1,12 +1,26 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
-import IesInterface from './components/ies/IesInterface'
+import IesInterface from './screens/ies'
+import { Flex } from '@chakra-ui/react'
+import Header from './components/Header'
+
 
 function App() {
 
   return (
-    <>
-      <IesInterface></IesInterface>
-    </>
+    <Router>
+
+      <Flex align='center' direction='column'>
+
+          <Header/>
+
+           <Routes>
+              <Route path='/ies' element={<IesInterface/>}/>
+           </Routes>
+
+      </Flex>
+
+    </Router>
   )
 }
 
